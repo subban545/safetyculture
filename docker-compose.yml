@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:13.3
+        environment:
+            POSTGRES_HOST_AUTH_METHOD: trust
+        restart: always
+        ports:
+          - "5432:5432"
+    postgres-load:
+        image: postgres:13.3
+        volumes:
+          - ./data:/data
+          - ./postgres-load:/postgres-load
+        working_dir: /postgres-load
+        command: bash load-data.sh
+        links:
+            - postgres:postgres
+        depends_on:
+            - postgres
