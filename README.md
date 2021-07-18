@@ -21,7 +21,7 @@ The purpose of each service is as follows;
 
 The following diagram shows the architecture of this data stream.
 
-![architecture diagram](https://github.com/subban545/safetyculture/master/images/current_pipeline.jpg "Data architecture")
+![architecture diagram](https://github.com/subban545/safetyculture/blob/master/images/current_pipeline.png "Data architecture")
 
 
 Both user metadata and events are pushed directly into the database.
@@ -74,4 +74,4 @@ All the user event details can be queried from sc.sc_user_event table.
 
 The architecture used was designed to load data from the files stored in disk. A production solution would likely have the following changes.
 
-![architecture diagram](https://github.com/subban545/safetyculture/master/images/production_pipeline.jpg "Data architecture")
+![architecture diagram](https://github.com/subban545/safetyculture/blob/master/images/production_pipeline.png "Data architecture")
